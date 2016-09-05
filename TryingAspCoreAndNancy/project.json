@@ -5,7 +5,10 @@
     "emitEntryPoint": true
   },
 
-  "dependencies": {},
+  "dependencies": {
+    "Microsoft.AspNetCore.Owin": "1.0.0",
+    "Nancy": "2.0.0-barneyrubble"
+  },
 
   "frameworks": {
     "netcoreapp1.0": {
