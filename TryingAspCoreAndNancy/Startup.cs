@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
+using Nancy.Owin;
 
 namespace TryingAspCoreAndNancy
 {
@@ -7,10 +7,11 @@ namespace TryingAspCoreAndNancy
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.Run(context =>
-            {
-                return context.Response.WriteAsync("Hello from ASP.NET Core!");
-            });
+            //app.Run(context =>
+            //{
+            //    return context.Response.WriteAsync("Hello from ASP.NET Core!");
+            //});
+            app.UseOwin(x => x.UseNancy());
         }
     }
 }
